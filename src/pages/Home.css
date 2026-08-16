@@ -1,0 +1,55 @@
+.home {
+  padding: 40px;
+}
+
+.home h1 {
+  font-size: 42px;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.movie-card {
+  width: 170px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.movie-poster-wrapper {
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: var(--color-surface);
+}
+
+.movie-poster {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.08);
+}
+
+.movie-title {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.status-message {
+  padding: 40px;
+  font-size: 18px;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+}
+
+.status-message.error {
+  color: var(--color-error);
+}

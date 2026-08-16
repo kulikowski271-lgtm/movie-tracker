@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getPopularMovies } from "../services/tmdb";
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
 
@@ -30,18 +31,15 @@ function Home() {
   return (
     <div>
         <h1>Popularne filmy</h1>
-        <div style={{display: "flex", flexWrap: "wrap", gap: "16px"}}>
+        <div className="movie-grid">
             {movies.map((movie) => (
-                <Link
-                to={`/movie/${movie.id}`}
-                key={movie.id}
-                style={{width: "150px", textDecoration: "none", color: "inherit"}}
+                <Link to={`/movie/${movie.id}`} key={movie.id} className="movie-card"
                 >
                     <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                     alt="{movie.title"
-                    style={{width: "100%", borderRadius: "8px"}}
+                    className="movie-poster"
                     />
-                    <p>{movie.title}</p>
+                    <p className="movie-title">{movie.title}</p>
                 </Link>
             ))}
         </div>
